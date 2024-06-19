@@ -37,6 +37,10 @@ public class LoginSaucedemo {
         String actual1 =  driver.findElement(By.xpath("//button[@id='remove-sauce-labs-backpack']")).getText();
         assertEquals(actual1, "Remove");
 
+        System.out.println("Test angka di logo keranjang bertambah");
+        String actual4 =  driver.findElement(By.xpath("//span[@class='shopping_cart_badge']")).getText();
+        assertEquals(actual4, "1");
+
         delay(3);
 
         driver.findElement(By.xpath("//a[@class='shopping_cart_link']")).click();
